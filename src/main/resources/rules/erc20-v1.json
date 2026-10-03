@@ -1,0 +1,29 @@
+{
+  "id": "erc20-v1",
+  "standard": "ERC20",
+  "version": "v1",
+  "defaultVersion": true,
+  "functions": [
+    {"name": "name", "inputs": [], "outputs": ["string"], "stateMutability": "view", "required": false, "severity": "WARNING"},
+    {"name": "symbol", "inputs": [], "outputs": ["string"], "stateMutability": "view", "required": false, "severity": "WARNING"},
+    {"name": "decimals", "inputs": [], "outputs": ["uint8"], "stateMutability": "view", "required": false, "severity": "WARNING"},
+    {"name": "totalSupply", "inputs": [], "outputs": ["uint256"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "balanceOf", "inputs": ["address"], "outputs": ["uint256"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "transfer", "inputs": ["address", "uint256"], "outputs": ["bool"], "stateMutability": "nonpayable", "required": true, "severity": "ERROR"},
+    {"name": "transferFrom", "inputs": ["address", "address", "uint256"], "outputs": ["bool"], "stateMutability": "nonpayable", "required": true, "severity": "ERROR"},
+    {"name": "approve", "inputs": ["address", "uint256"], "outputs": ["bool"], "stateMutability": "nonpayable", "required": true, "severity": "ERROR"},
+    {"name": "allowance", "inputs": ["address", "address"], "outputs": ["uint256"], "stateMutability": "view", "required": true, "severity": "ERROR"}
+  ],
+  "events": [
+    {"name": "Transfer", "required": true, "severity": "ERROR", "params": [
+      {"name": "from", "type": "address", "indexed": true},
+      {"name": "to", "type": "address", "indexed": true},
+      {"name": "value", "type": "uint256", "indexed": false}
+    ]},
+    {"name": "Approval", "required": true, "severity": "ERROR", "params": [
+      {"name": "owner", "type": "address", "indexed": true},
+      {"name": "spender", "type": "address", "indexed": true},
+      {"name": "value", "type": "uint256", "indexed": false}
+    ]}
+  ]
+}

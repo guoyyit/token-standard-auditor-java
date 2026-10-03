@@ -1,0 +1,37 @@
+{
+  "id": "erc721-v2",
+  "standard": "ERC721",
+  "version": "v2",
+  "defaultVersion": false,
+  "functions": [
+    {"name": "balanceOf", "inputs": ["address"], "outputs": ["uint256"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "ownerOf", "inputs": ["uint256"], "outputs": ["address"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "safeTransferFrom", "inputs": ["address", "address", "uint256"], "outputs": [], "stateMutability": "payable", "required": true, "severity": "ERROR"},
+    {"name": "safeTransferFrom", "inputs": ["address", "address", "uint256", "bytes"], "outputs": [], "stateMutability": "payable", "required": true, "severity": "ERROR"},
+    {"name": "transferFrom", "inputs": ["address", "address", "uint256"], "outputs": [], "stateMutability": "payable", "required": true, "severity": "ERROR"},
+    {"name": "approve", "inputs": ["address", "uint256"], "outputs": [], "stateMutability": "payable", "required": true, "severity": "ERROR"},
+    {"name": "getApproved", "inputs": ["uint256"], "outputs": ["address"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "setApprovalForAll", "inputs": ["address", "bool"], "outputs": [], "stateMutability": "nonpayable", "required": true, "severity": "ERROR"},
+    {"name": "isApprovedForAll", "inputs": ["address", "address"], "outputs": ["bool"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "supportsInterface", "inputs": ["bytes4"], "outputs": ["bool"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "name", "inputs": [], "outputs": ["string"], "stateMutability": "view", "required": false, "severity": "INFO"},
+    {"name": "symbol", "inputs": [], "outputs": ["string"], "stateMutability": "view", "required": false, "severity": "INFO"}
+  ],
+  "events": [
+    {"name": "Transfer", "required": true, "severity": "ERROR", "params": [
+      {"name": "from", "type": "address", "indexed": true},
+      {"name": "to", "type": "address", "indexed": true},
+      {"name": "tokenId", "type": "uint256", "indexed": true}
+    ]},
+    {"name": "Approval", "required": true, "severity": "ERROR", "params": [
+      {"name": "owner", "type": "address", "indexed": true},
+      {"name": "approved", "type": "address", "indexed": true},
+      {"name": "tokenId", "type": "uint256", "indexed": true}
+    ]},
+    {"name": "ApprovalForAll", "required": true, "severity": "ERROR", "params": [
+      {"name": "owner", "type": "address", "indexed": true},
+      {"name": "operator", "type": "address", "indexed": true},
+      {"name": "approved", "type": "bool", "indexed": false}
+    ]}
+  ]
+}

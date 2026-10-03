@@ -1,0 +1,30 @@
+{
+  "id": "erc20-v2",
+  "standard": "ERC20",
+  "version": "v2",
+  "defaultVersion": false,
+  "functions": [
+    {"name": "name", "inputs": [], "outputs": ["string"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "symbol", "inputs": [], "outputs": ["string"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "decimals", "inputs": [], "outputs": ["uint8"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "totalSupply", "inputs": [], "outputs": ["uint256"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "balanceOf", "inputs": ["address"], "outputs": ["uint256"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "transfer", "inputs": ["address", "uint256"], "outputs": ["bool"], "stateMutability": "nonpayable", "required": true, "severity": "ERROR"},
+    {"name": "transferFrom", "inputs": ["address", "address", "uint256"], "outputs": ["bool"], "stateMutability": "nonpayable", "required": true, "severity": "ERROR"},
+    {"name": "approve", "inputs": ["address", "uint256"], "outputs": ["bool"], "stateMutability": "nonpayable", "required": true, "severity": "ERROR"},
+    {"name": "allowance", "inputs": ["address", "address"], "outputs": ["uint256"], "stateMutability": "view", "required": true, "severity": "ERROR"},
+    {"name": "supportsInterface", "inputs": ["bytes4"], "outputs": ["bool"], "stateMutability": "view", "required": false, "severity": "INFO"}
+  ],
+  "events": [
+    {"name": "Transfer", "required": true, "severity": "ERROR", "params": [
+      {"name": "from", "type": "address", "indexed": true},
+      {"name": "to", "type": "address", "indexed": true},
+      {"name": "value", "type": "uint256", "indexed": false}
+    ]},
+    {"name": "Approval", "required": true, "severity": "ERROR", "params": [
+      {"name": "owner", "type": "address", "indexed": true},
+      {"name": "spender", "type": "address", "indexed": true},
+      {"name": "value", "type": "uint256", "indexed": false}
+    ]}
+  ]
+}
